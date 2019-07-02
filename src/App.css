@@ -49,6 +49,7 @@ form {
   outline: none;
   float: right;
   margin-right: 200px;
+  font-weight: bold;
 }
 .add:active{
   background-color: #c79e21;
@@ -69,6 +70,7 @@ form {
   margin-right: 60px;
   cursor: pointer;
   outline: none;
+  margin-bottom: 50px;
 }
 .item:active{
   cursor: auto;
