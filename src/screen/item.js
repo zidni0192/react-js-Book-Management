@@ -1,7 +1,7 @@
 import React from 'react'
 
 function text(text) {
-    let textSplit = text.substr(0, 50)
+    let textSplit = text.substr(0, 30)
     return `${textSplit} ...`
 }
 
