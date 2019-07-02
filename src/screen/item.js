@@ -2,7 +2,7 @@ import React from 'react'
 
 function text(text) {
     let textSplit = text.substr(0, 30)
-    return `${textSplit} ...`
+    return `${textSplit}`
 }
 
 function Item(prop) {
