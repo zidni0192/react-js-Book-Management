@@ -7,6 +7,7 @@ function list(prop) {
             <button className="add">ADD</button>
             <div className="list-item">
                 <Item data={data} />
+                
             </div>
         </div>
     )

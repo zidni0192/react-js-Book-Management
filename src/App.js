@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Nav from '../src/screen/Navbar'
+import Search from '../src/screen/search'
 import List from '../src/screen/list'
 import Data from '../src/data'
 class App extends Component {
@@ -12,9 +13,7 @@ class App extends Component {
     return (
       <div id="app">
         <Nav />
-        <form>
-          <input type="text" id="search" placeholder="Search Book ..." />
-        </form>
+        <Search />
         <List data={this.state}/>
       </div>
     )

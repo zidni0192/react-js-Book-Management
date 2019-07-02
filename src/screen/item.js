@@ -1,8 +1,14 @@
 import React from 'react'
 
 function text(text) {
-    let textSplit = text.substr(0, 30)
-    return `${textSplit}`
+
+    if(text.length > 20){
+        let textSplit = text.substr(0, 20)
+        return `${textSplit} ...`    
+    }else{
+        let textSplit = text
+        return `${textSplit}`    
+    }
 }
 
 function Item(prop) {
