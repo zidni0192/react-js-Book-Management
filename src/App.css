@@ -49,7 +49,7 @@ form {
   color: white;
   outline: none;
   float: right;
-  margin-right: 200px;
+  margin-right: 220px;
   font-weight: bold;
   z-index: 1100;
 }
@@ -80,6 +80,7 @@ form {
   cursor: pointer;
   outline: none;
   margin-bottom: 50px;
+  box-sizing: border-box;
 }
 .item:active{
   cursor: auto;
@@ -92,15 +93,13 @@ form {
   object-fit: cover;
   object-position: 50% 50%;
 }
-
-.item p {
-  padding: 0px 20px 0px 10px;
-  margin: 0px;
-  font-weight: bold;
-  font-size: 15pt;
-  overflow: hidden;
+.item div{
   width: 100%;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+.item p {
+  margin: 0;
+  width: 100%;
+  font-size: 15pt;
 }
