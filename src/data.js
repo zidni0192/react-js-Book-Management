@@ -1,7 +1,7 @@
 const data = [
     {
         bookid: "1",
-        title: "SEBUAH SENI UNTUK ",
+        title: "SEBUAH SENI UNTUK",
         image_url:"https://ssvr.bukukita.com/babacms/displaybuku/94832_f.jpg",
         writer: "Pencari",
         location: "Rak A",
