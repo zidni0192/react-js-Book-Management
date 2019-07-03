@@ -20,8 +20,7 @@ class App extends Component {
           <Route exact path={"/book"} component={Nav}/>
           <Route exact path={"/book"} component={Search}/>
           <Route exact path={"/book"} render={()=><List data={this.state}/>} />
-          <Route path={"/book/:bookid"} component={BookDetail}/>
-          <Route path={"/modal"} component={Modal}/>
+          <Route exact path={"/book/:bookid"} component={BookDetail}/>
         </Router>
         
       </div>
