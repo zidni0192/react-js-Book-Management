@@ -22,11 +22,13 @@ function BookDetail(props) {
           <li><Link to="">Edit</Link></li>
           <li><Link to="">Delete</Link></li>
         </ul>
-        <img src={data.image_url} alt={data.title}/>
+        <img className={'imageHeader'} src={data.image_url} alt={data.title}/>
       </div>
       <div className="content">
+        <img className={'imageBook'} src={data.image_url} alt={data.title}/>
       <p className="title">{data.title}</p>
       <p className="date">{convert(data.updated_at)}</p>
+      <p className="text">{data.description}</p>
       </div>
     </div>
   )

@@ -12,6 +12,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = Data
+    var G = this.state
   }  
   render() {
     return (
