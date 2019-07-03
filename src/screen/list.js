@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function text(text) {
     if (text.length > 20) {
@@ -9,7 +10,6 @@ function text(text) {
         return `${textSplit}`
     }
 }
-
 function list(prop) {
     let data = prop.data
     return (
@@ -20,12 +20,14 @@ function list(prop) {
                     data.map(
                         item => {
                             return (
-                                <div className="item">
-                                    <img src={item.image_url} alt="gambar" />
-                                    <div>
-                                        <p>{text(item.title)}</p>
+                                <Link to={`/book/${item.bookid}`}>
+                                    <div className="item" id="items" bookid={item.bookid}>
+                                        <img src={item.image_url} alt="gambar" />
+                                        <div>
+                                            <p>{text(item.title)}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             )
                         }
                     )
