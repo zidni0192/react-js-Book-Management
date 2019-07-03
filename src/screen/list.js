@@ -10,11 +10,11 @@ function text(text) {
         return `${textSplit}`
     }
 }
-function list(prop) {
-    let data = prop.data
+function list({ prop, showModal}) {
+    let data = prop.Data
     return (
         <div className="list">
-            <button className="add">ADD</button>
+            <button className="add" onClick={showModal}>ADD</button>
             <div className="list-item">
                 {
                     data.map(

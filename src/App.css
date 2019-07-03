@@ -53,9 +53,9 @@ form {
   font-weight: bold;
   z-index: 1100;
 }
-.add:active{
+
+.add:active {
   background-color: #c79e21;
-  cursor:auto;
 }
 
 .list-item {
@@ -82,9 +82,7 @@ form {
   margin-bottom: 50px;
   box-sizing: border-box;
 }
-.item:active{
-  cursor: auto;
-}
+
 .item img {
   width: 100%;
   height: 200px;
@@ -93,55 +91,175 @@ form {
   object-fit: cover;
   object-position: 50% 50%;
 }
-.item div{
+
+.item div {
   width: 100%;
   padding: 0px 10px;
   box-sizing: border-box;
 }
+
 .item p {
   margin: 0;
   width: 100%;
   font-size: 15pt;
   color: black
 }
-.imageHeader{
+
+.imageHeader {
   width: 100%;
   height: 300px;
   background: black;
   object-fit: cover;
   object-position: 50% 50%;
 }
-.book-detail ul{
+
+.book-detail ul {
   margin: 0;
   list-style-type: none;
   position: absolute;
 }
-.book-detail ul li{
+
+.book-detail ul li {
   padding: 30px 20px;
   display: inline-block;
 }
-.book-detail ul li a{
+
+.book-detail ul li a , .button{
   text-decoration: none;
   color: #fff;
-  font-weight: 550;  
+  font-weight: 550;
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 0px 0px 2px black;
+  cursor: pointer;
 }
-.content{
+
+.content {
   padding: 30px 100px;
-  width:60%;
+  width: 60%;
   position: relative;
 }
-p.title{
+
+p.title {
   margin: 0;
-  font-size: 40pt;
+  font-size: 25pt;
   font-weight: bold;
 }
-.imageBook{
+p.date{
+  font-weight: bold
+}
+
+.imageBook {
   position: absolute;
   top: -200px;
   width: 20%;
   border-radius: 5px;
   box-shadow: 0px 0px 4px black;
   right: -250px;
+}
+
+.back {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px 50px 30px 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 80%;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px gray
+}
+
+.close {
+  position: absolute;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  right: 0px;
+  padding: 20px 30px;
+  margin: 10px;
+  font-size: 15pt;
+  outline: none;
+  font-weight: bold
+}
+
+.close:active {
+  color: #aaa;
+}
+
+.display-block {
+  display: block;
+}
+
+.modal-main p{
+  padding: 10px 40px;  
+  font-size: 30px;
+  font-weight: bold
+}
+
+.display-none {
+  display: none;
+}
+.label{
+  width: 20%;
+  font-size: 15pt;
+  float: left;
+}
+.label p{
+  font-weight: bold;
+  font-size: 15pt;
+  padding: 0;
+  margin: 0px;
+  padding-top: 15px;
+  float: left;
+  padding-left: 40px
+}
+.inputGroup{
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.input{
+  font-size: 20px;
+  font-weight: bold;
+  width: 65%;
+  float: left;
+}
+.input input,.input textarea{
+  padding: 15px 30px;
+  width: 100%;
+  font-size: 15pt;
+  border-radius: 10px;
+  border: 1px solid gray;
+  outline: none;
+}
+.input textarea{
+  resize: none;
+}
+.save {
+  padding: 12px 30px;
+  background-color: #f4cf5d;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12pt;
+  color: white;
+  outline: none;
+  float: right;
+  margin-right: 100px;
+  font-weight: bold;
+  z-index: 1100;
 }

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-import Data from '../data'
 import {Link} from 'react-router-dom'
+
+function deleteData(){
+    
+}
 
 function convert(date){
   let data = Date.parse(date)
@@ -13,14 +16,17 @@ function convert(date){
 }
 
 function BookDetail(props) {
+  console.log(props)
   let bookid = props.match.params.bookid
+  let Data = props.data.Data
   let data = Data.find((item)=>item.bookid === bookid)
   return (
     <div className="book-detail">
       <div>
         <ul>
-          <li><Link to="">Edit</Link></li>
-          <li><Link to="">Delete</Link></li>
+          <li><Link to="/book" className="back">&lArr;</Link></li>
+          <li className="button" onClick={props.showModal}>Edit</li>
+          <li className="button">Delete</li>
         </ul>
         <img className={'imageHeader'} src={data.image_url} alt={data.title}/>
       </div>
@@ -30,6 +36,7 @@ function BookDetail(props) {
       <p className="date">{convert(data.updated_at)}</p>
       <p className="text">{data.description}</p>
       </div>
+      
     </div>
   )
 }
