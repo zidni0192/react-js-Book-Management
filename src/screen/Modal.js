@@ -2,24 +2,35 @@ import React, { Component } from 'react'
 
 
 const Modal = (props) => {
+    console.log(props)
     const showHideClassName = props.show ? "modal display-block" : "modal display-none"
     let action = props.dataAdded ? add : edit
     let dataFind = []
     let dataIndex = ""
-    if(action === edit){
+    let inputed=""
+    if (action === edit) {
         dataFind = props.dataState.Data.find(item => item.bookid === props.match.params.bookid)
         dataIndex = props.dataState.Data.indexOf(dataFind)
     }
-    let data = []
+    let data = dataFind
     function getData(evt) {
         let nme = evt.target.name
         data[nme] = evt.target.value
+        props.editText(evt)
     }
     function add() {
         props.dataAdded(data)
+        props.handleClose()
     }
     function edit() {
-        props.dataEdited(data)
+        props.dataEdited(dataIndex, data)
+        props.handleClose()
+    }
+    function autoID(){
+        data['bookid'] = toString(Number(props.dataState.Data[props.dataState.Data.length -1].bookid)+1)
+    }
+    function setValue(evt){
+        props.getEditText(evt)
     }
     return (
         <div className={showHideClassName}>
@@ -32,7 +43,7 @@ const Modal = (props) => {
                             <p>Url Image</p>
                         </div>
                         <div className="input">
-                            <input type="text" placeholder="Url Image ..." name="image_url" onChange={getData} value={action === edit ? dataFind.image_url : ""} />
+                            <input type="text" placeholder="Url Image ..." name="image_url" onChange={getData} value={action === edit ? dataFind.image_url : ""}  />
                         </div>
                     </div>
                     <div className="inputGroup">

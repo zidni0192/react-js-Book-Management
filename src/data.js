@@ -2,7 +2,7 @@ const data = [
     {
         bookid: "1",
         title: "SEBUAH SENI UNTUK BERSIKAP BODOAMAT",
-        image_url:"https://ssvr.bukukita.com/babacms/displaybuku/94832_f.jpg",
+        image_url: "https://ssvr.bukukita.com/babacms/displaybuku/94832_f.jpg",
         writer: "Pencari",
         location: "Rak A",
         category: "Fiction",
@@ -21,7 +21,7 @@ const data = [
     {
         bookid: "2",
         title: "Sang Kuriang",
-        image_url:"https://i1.wp.com/www.rosediana.net/wp-content/uploads/2015/08/Cover-Buku-Everyone-Can-Be-a-Role-Model_-lulu-Elshabu.jpg",
+        image_url: "https://i1.wp.com/www.rosediana.net/wp-content/uploads/2015/08/Cover-Buku-Everyone-Can-Be-a-Role-Model_-lulu-Elshabu.jpg",
         writer: "Kuriang",
         location: "Rak B",
         category: "Ayam",
@@ -33,13 +33,13 @@ const data = [
         
         Sed cursus est vel congue tincidunt. Vivamus auctor lacus convallis, tincidunt nunc quis, iaculis sem. Fusce auctor id dui sit amet gravida. Nulla ultricies porttitor euismod. Mauris vestibulum efficitur dui et tristique. Aenean pulvinar turpis a erat ultricies eleifend. Curabitur ultrices condimentum erat, in bibendum metus venenatis a.
         
-        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`,        created_at: "2019-06-28 10:08:17",
+        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`, created_at: "2019-06-28 10:08:17",
         updated_at: "2019-06-28 10:08:17",
     },
     {
         bookid: "3",
         title: "Sang Pembalap",
-        image_url:"https://i0.wp.com/satujam.com/wp-content/uploads/2017/08/desain-cover-buku-1.jpg?fit=800%2C600&ssl=1",
+        image_url: "https://i0.wp.com/satujam.com/wp-content/uploads/2017/08/desain-cover-buku-1.jpg?fit=800%2C600&ssl=1",
         writer: "Pembalap",
         location: "Rak C",
         category: "Comedy",
@@ -51,13 +51,13 @@ const data = [
         
         Sed cursus est vel congue tincidunt. Vivamus auctor lacus convallis, tincidunt nunc quis, iaculis sem. Fusce auctor id dui sit amet gravida. Nulla ultricies porttitor euismod. Mauris vestibulum efficitur dui et tristique. Aenean pulvinar turpis a erat ultricies eleifend. Curabitur ultrices condimentum erat, in bibendum metus venenatis a.
         
-        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`,        created_at: "2019-06-28 10:08:17",
+        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`, created_at: "2019-06-28 10:08:17",
         updated_at: "2019-06-28 10:08:17",
     },
     {
         bookid: "4",
         title: "Sang Sang an",
-        image_url:"https://ssvr.bukukita.com/babacms/displaybuku/104418_f.jpg",
+        image_url: "https://ssvr.bukukita.com/babacms/displaybuku/104418_f.jpg",
         writer: "An",
         location: "Rak Z",
         category: "Aneh",
@@ -69,13 +69,13 @@ const data = [
         
         Sed cursus est vel congue tincidunt. Vivamus auctor lacus convallis, tincidunt nunc quis, iaculis sem. Fusce auctor id dui sit amet gravida. Nulla ultricies porttitor euismod. Mauris vestibulum efficitur dui et tristique. Aenean pulvinar turpis a erat ultricies eleifend. Curabitur ultrices condimentum erat, in bibendum metus venenatis a.
         
-        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`,        created_at: "2019-06-28 10:08:17",
+        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`, created_at: "2019-06-28 10:08:17",
         updated_at: "2019-06-28 10:08:17",
     },
     {
         bookid: "5",
         title: "Pencari Sang",
-        image_url:"https://upload.wikimedia.org/wikipedia/id/8/89/Sang_Pemimpi_sampul.jpg",
+        image_url: "https://upload.wikimedia.org/wikipedia/id/8/89/Sang_Pemimpi_sampul.jpg",
         writer: "Sang",
         location: "Rak E",
         category: "Rusak",
@@ -87,13 +87,13 @@ const data = [
         
         Sed cursus est vel congue tincidunt. Vivamus auctor lacus convallis, tincidunt nunc quis, iaculis sem. Fusce auctor id dui sit amet gravida. Nulla ultricies porttitor euismod. Mauris vestibulum efficitur dui et tristique. Aenean pulvinar turpis a erat ultricies eleifend. Curabitur ultrices condimentum erat, in bibendum metus venenatis a.
         
-        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`,        created_at: "2019-06-28 10:08:17",
+        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`, created_at: "2019-06-28 10:08:17",
         updated_at: "2019-06-28 10:08:17",
     },
     {
         bookid: "6",
         title: "Makna",
-        image_url:"https://blog.sribu.com/wp-content/uploads/2018/07/Nuansa-Cover-Buku.jpg",
+        image_url: "https://blog.sribu.com/wp-content/uploads/2018/07/Nuansa-Cover-Buku.jpg",
         writer: "Makna",
         location: "Rak Z",
         category: "Reuse",
@@ -105,13 +105,13 @@ const data = [
         
         Sed cursus est vel congue tincidunt. Vivamus auctor lacus convallis, tincidunt nunc quis, iaculis sem. Fusce auctor id dui sit amet gravida. Nulla ultricies porttitor euismod. Mauris vestibulum efficitur dui et tristique. Aenean pulvinar turpis a erat ultricies eleifend. Curabitur ultrices condimentum erat, in bibendum metus venenatis a.
         
-        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`,        created_at: "2019-06-28 10:08:17",
+        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`, created_at: "2019-06-28 10:08:17",
         updated_at: "2019-06-28 10:08:17",
     },
     {
         bookid: "7",
         title: "Sang Rang",
-        image_url:"http://sitimustiani.com/wp-content/uploads/2016/11/BOOK-COVER-STELLA.jpg",
+        image_url: "http://sitimustiani.com/wp-content/uploads/2016/11/BOOK-COVER-STELLA.jpg",
         writer: "Rang",
         location: "Rak Rang",
         category: "Mbuh",
@@ -123,7 +123,7 @@ const data = [
         
         Sed cursus est vel congue tincidunt. Vivamus auctor lacus convallis, tincidunt nunc quis, iaculis sem. Fusce auctor id dui sit amet gravida. Nulla ultricies porttitor euismod. Mauris vestibulum efficitur dui et tristique. Aenean pulvinar turpis a erat ultricies eleifend. Curabitur ultrices condimentum erat, in bibendum metus venenatis a.
         
-        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`,        created_at: "2019-06-28 10:08:17",
+        Phasellus eu nibh volutpat, sagittis nulla at, tincidunt lectus. Mauris rutrum accumsan sodales. Donec finibus libero a magna tempor pellentesque ac sit amet sapien. Praesent sollicitudin at ipsum eu sagittis. Sed cursus elementum sagittis. Donec condimentum tincidunt sapien sed posuere. Praesent gravida lacus et dolor suscipit, vitae convallis mauris vulputate.`, created_at: "2019-06-28 10:08:17",
         updated_at: "2019-06-28 10:08:17",
     },
 ]

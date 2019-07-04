@@ -124,7 +124,7 @@ form {
   display: inline-block;
 }
 
-.book-detail ul li a , .button{
+.book-detail ul li a, .button {
   text-decoration: none;
   color: #fff;
   font-weight: 550;
@@ -144,7 +144,8 @@ p.title {
   font-size: 25pt;
   font-weight: bold;
 }
-p.date{
+
+p.date {
   font-weight: bold
 }
 
@@ -205,8 +206,8 @@ p.date{
   display: block;
 }
 
-.modal-main p{
-  padding: 10px 40px;  
+.modal-main p {
+  padding: 10px 40px;
   font-size: 30px;
   font-weight: bold
 }
@@ -214,12 +215,14 @@ p.date{
 .display-none {
   display: none;
 }
-.label{
+
+.label {
   width: 20%;
   font-size: 15pt;
   float: left;
 }
-.label p{
+
+.label p {
   font-weight: bold;
   font-size: 15pt;
   padding: 0;
@@ -228,17 +231,20 @@ p.date{
   float: left;
   padding-left: 40px
 }
-.inputGroup{
+
+.inputGroup {
   padding-bottom: 10px;
   overflow: hidden;
 }
-.input{
+
+.input {
   font-size: 20px;
   font-weight: bold;
   width: 65%;
   float: left;
 }
-.input input,.input textarea{
+
+.input input, .input textarea {
   padding: 15px 30px;
   width: 100%;
   font-size: 15pt;
@@ -246,9 +252,11 @@ p.date{
   border: 1px solid gray;
   outline: none;
 }
-.input textarea{
+
+.input textarea {
   resize: none;
 }
+
 .save {
   padding: 12px 30px;
   background-color: #f4cf5d;

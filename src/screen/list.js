@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function text(text) {
     if (text.length > 20) {
@@ -10,7 +10,7 @@ function text(text) {
         return `${textSplit}`
     }
 }
-function list({ prop, showModal}) {
+function list({ prop, showModal }) {
     let data = prop.Data
     return (
         <div className="list">
