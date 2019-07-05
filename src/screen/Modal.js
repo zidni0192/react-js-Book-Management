@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
 
 const Modal = (props) => {
     const [texts, setText] = useState(props.dataAdded ? "" : props.dataState.Data.find(item => item.bookid === props.match.params.bookid))
