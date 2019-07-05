@@ -14,11 +14,10 @@ const Modal = (props) => {
         dataIndex = props.dataState.Data.indexOf(dataFind)
     }
     function getData(evt) {
-        let nme = evt.target.name
-        data[nme] = evt.target.value
         setText({ nme: evt.target.value })
     }
-    function add() {
+    function add() {        
+        setData(data.description=document.getElementById('description').value,data.title=document.getElementById('title').value,data.image_url=document.getElementById('image_url').value)
         autoID()
         setData(data.created_at=new Date(),data.updated_at=new Date())
         props.dataAdded(data)
@@ -26,9 +25,9 @@ const Modal = (props) => {
         setText({})
     }
     function edit() {
+        setData(data.image_url=document.getElementById('image_url').value,data.description=document.getElementById('description').value,data.title=document.getElementById('title').value)
         let bookid = props.match.params.bookid
-        setData(data.bookid = bookid)
-        setData(data.created_at=dataFind.created_at,data.updated_at= new Date())
+        setData(data.bookid = bookid,data.created_at=dataFind.created_at,data.updated_at= new Date()    )
         console.log(data.bookid)        
         props.dataEdited(dataIndex, data)
         props.handleClose()
@@ -50,7 +49,7 @@ const Modal = (props) => {
                             <p>Url Image</p>
                         </div>
                         <div className="input">
-                            <input type="text" placeholder="Url Image ..." name="image_url" onChange={getData} value={texts.image_url} required />
+                            <input type="text" placeholder="Url Image ..." id={'image_url'} name="image_url" onChange={getData} value={texts.image_url} required />
                         </div>
                     </div>
                     <div className="inputGroup">
@@ -58,7 +57,7 @@ const Modal = (props) => {
                             <p>Title</p>
                         </div>
                         <div className="input">
-                            <input type="text" placeholder="Title ..." name="title" onChange={getData} value={texts.title} required />
+                            <input type="text" placeholder="Title ..." id={'title'} name="title" onChange={getData} value={texts.title} required />
                         </div>
                     </div>
                     <div className="inputGroup">
@@ -66,7 +65,7 @@ const Modal = (props) => {
                             <p>Description</p>
                         </div>
                         <div className="input">
-                            <textarea placeholder="Description" rows="5" name="description" onChange={getData} value={texts.description} required></textarea>
+                            <textarea placeholder="Description" id={'description'} rows="5" name="description" onChange={getData} value={texts.description}  required></textarea>
                         </div>
                     </div>
                     <div>
