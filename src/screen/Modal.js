@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import {Link} from 'react-router-dom'
 
 const Modal = (props) => {
     const [texts, setText] = useState(props.dataAdded ? "" : props.dataState.Data.find(item => item.bookid === props.match.params.bookid))
@@ -19,19 +19,21 @@ const Modal = (props) => {
     function add() {        
         setData(data.description=document.getElementById('description').value,data.title=document.getElementById('title').value,data.image_url=document.getElementById('image_url').value)
         autoID()
+        document.getElementById('description').value = ""
+        document.getElementById('title').value = ""
+        document.getElementById('image_url').value =""
         setData(data.created_at=new Date(),data.updated_at=new Date())
         props.dataAdded(data)
         props.handleClose()
-        setText({})
+        setData({})
     }
     function edit() {
         setData(data.image_url=document.getElementById('image_url').value,data.description=document.getElementById('description').value,data.title=document.getElementById('title').value)
         let bookid = props.match.params.bookid
         setData(data.bookid = bookid,data.created_at=dataFind.created_at,data.updated_at= new Date()    )
-        console.log(data.bookid)        
         props.dataEdited(dataIndex, data)
         props.handleClose()
-        setText({})
+        setData({})
     }
     function autoID() {
         console.log(props.dataState.Data[props.dataState.Data.length - 1].bookid)
@@ -69,7 +71,7 @@ const Modal = (props) => {
                         </div>
                     </div>
                     <div>
-                        <button className="save" onClick={action}>Save</button>
+                    <button className="save" onClick={action}>Save</button>
                     </div>
                 </div>
             </section>

@@ -14,7 +14,7 @@ function list({ prop, search, showModal }) {
     let dataMap 
     if(search !== ''){
         
-        dataMap = prop.Data.filter(item => item.title.toLowerCase().indexOf(search) > -1)
+        dataMap = prop.Data.filter(item => item.title.toLowerCase().indexOf(search.toLowerCase()) > -1)
     }
     let data = search !== '' ? dataMap : prop.Data
     return (
