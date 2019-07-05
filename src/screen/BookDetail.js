@@ -1,9 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-function deleteData() {
-
-}
 
 function convert(date) {
   let data = Date.parse(date)
@@ -14,15 +11,14 @@ function convert(date) {
   var year = newDate.getFullYear();
   return `${day} ${month} ${year}`
 }
-
+let data
 function BookDetail(props) {
-  console.log(props)
   let bookid = props.match.params.bookid
   let Data = props.data.Data
-  let data = Data.find((item) => item.bookid === bookid)
-  function deleteData(){
-    let dataIndex = Data.indexOf(data)
-    props.deleteData(dataIndex)
+  console.log(Data)
+  data = Data.find((item) => item.bookid === bookid)
+  function deleteData() {
+    props.showModalDelete()
   }
   return (
     <div className="book-detail">
