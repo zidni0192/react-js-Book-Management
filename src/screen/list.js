@@ -43,7 +43,7 @@ function list({ prop, search, showModal }) {
                                 </div>
                             </div>
                         </Link>
-                        :{}
+                        :<div></div>
                 }
             </div>
         </div>
