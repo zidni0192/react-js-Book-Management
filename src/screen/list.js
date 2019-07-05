@@ -34,7 +34,7 @@ function list({ prop, search, showModal }) {
                                 )
                             }
                         )
-                        :
+                        : data !== undefined ?
                         <Link to={`/book/${data.bookid}`}>
                             <div className="item" id="items" bookid={data.bookid}>
                                 <img src={data.image_url} alt="gambar" />
@@ -43,6 +43,7 @@ function list({ prop, search, showModal }) {
                                 </div>
                             </div>
                         </Link>
+                        :{}
                 }
             </div>
         </div>
