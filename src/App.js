@@ -28,12 +28,12 @@ class App extends Component {
   hideModalDelete = () => {
     this.setState({ modalDelete: false })
   }
-  addData = (dataAdded) => {
-    this.state.Data.push(dataAdded)
+  addData = (data) => {
+    this.state.Data.push(data)
     console.log(this.state.Data)
   }
-  deleteData = (deleteData) => {
-    this.state.Data.splice(deleteData, 1)
+  deleteData = (index) => {
+    this.state.Data.splice(index, 1)
     console.log(this.state.Data)
   }
   editData = (index, editData) => {

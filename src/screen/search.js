@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Search(props) {
+function Search() {
     return (
         <form>
-            <input type="text" id="search" onChange={props.setSearch} placeholder="Search Book ..." />
+            <input type="text" id="search" placeholder="Search Book ..." />
         </form>
     )
 }
