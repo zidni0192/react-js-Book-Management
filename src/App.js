@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import './App.css'
 import Nav from './screen/Navbar'
 import Search from './screen/search'
 import List from './screen/list'
 import Data from './data'
 import BookDetail from './screen/BookDetail'
-import { Route, Redirect, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Redirect, BrowserRouter as Router, Switch } from 'react-router-dom'
 import Modal from './screen/Modal'
 import ModalDelete from './screen/ModalDelete'
 
 class App extends Component {
   constructor() {
     super()
-    this.state = { Data, show: false, modalDelete: false ,search:''}
+    this.state = { Data, show: false, modalDelete: false, search: '' }
   }
   showModal = () => {
     this.setState({ show: true })
@@ -39,30 +40,34 @@ class App extends Component {
   editData = (index, editData) => {
     this.setState(Data[index] = editData)
   }
-  setSearch = (search) =>{
-    this.setState({search:search})
+  setSearch = (search) => {
+    this.setState({ search: search })
   }
   render() {
     return (
       <div id="app">
         <Router>
-
-          <Route exact path={"/book"} component={Nav} />
-          <Route exact path={"/book"} render={()=><Search setSearch={this.setSearch}/>} />
-          <Route exact path={"/book"} render={() => <List prop={this.state} search={this.state.search} showModal={this.showModal} />} />
-          <Route exact path={"/book"} render={() => <Modal show={this.state.show} dataState={this.state} handleClose={this.hideModal} dataAdded={this.addData} />} />
-          <Route path={"/book/:bookid"} render={(props) => <BookDetail data={this.state} showModal={this.showModal} showModalDelete={this.showModalDelete} {...props} />} />
-          <Route path={"/book/:bookid"} render={(props) => <ModalDelete data={this.state} deleteData={this.deleteData} modalDelete={this.state.modalDelete} hideModalDelete={this.hideModalDelete} {...props} />} />
-          <Route path={"/book/:bookid"} render={(props) => <Modal dataState={this.state} show={this.state.show} handleClose={this.hideModal} dataEdited={this.editData} {...props} />} />
-          <Route component={redirect}/>
+          <Switch>
+            <Route exact path={"/book"}>
+              <Route exact path={"/book"} component={Nav} />
+              <Route exact path={"/book"} render={() => <Search setSearch={this.setSearch} />} />
+              <Route exact path={"/book"} render={() => <List prop={this.state} search={this.state.search} showModal={this.showModal} />} />
+              <Route exact path={"/book"} render={() => <Modal show={this.state.show} dataState={this.state} handleClose={this.hideModal} dataAdded={this.addData} />} />
+            </Route>
+            <Route path={"/book/:bookid"}>
+              <Route path={"/book/:bookid"} render={(props) => <BookDetail data={this.state} showModal={this.showModal} showModalDelete={this.showModalDelete} {...props} />} />
+              <Route path={"/book/:bookid"} render={(props) => <ModalDelete data={this.state} deleteData={this.deleteData} modalDelete={this.state.modalDelete} hideModalDelete={this.hideModalDelete} {...props} />} />
+              <Route path={"/book/:bookid"} render={(props) => <Modal dataState={this.state} show={this.state.show} handleClose={this.hideModal} dataEdited={this.editData} {...props} />} />
+            </Route>
+            <Route component={redirect} />
+          </Switch>
         </Router>
       </div>
     )
   }
 }
-
 function redirect() {
-  return (<Redirect to={'/book'}/>)
+  return <Redirect path={"/book"} />
 }
 
 export default App

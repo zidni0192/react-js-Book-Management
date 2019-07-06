@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 
 function convert(date) {
@@ -13,31 +13,37 @@ function convert(date) {
 }
 let data
 function BookDetail(props) {
+  console.log(props)
   let bookid = props.match.params.bookid
   let Data = props.data.Data
-  console.log(Data)
   data = Data.find((item) => item.bookid === bookid)
+  console.log(data)
   function deleteData() {
     props.showModalDelete()
   }
-  return (
-    <div className="book-detail">
-      <div>
-        <ul>
-          <li><Link to="/book" className="back">&lArr;</Link></li>
-          <li className="button" onClick={props.showModal}>Edit</li>
-          <li className="button" onClick={deleteData}>Delete</li>
-        </ul>
-        <img className={'imageHeader'} src={data.image_url} alt={data.title} />
+  if (!data) {
+    console.log("sadnsljnlsandlisnl")
+    return (document.location.href = "/book")
+  } else {
+    return (
+      <div className="book-detail">
+        <div>
+          <ul>
+            <li><Link to="/book" className="back">&lArr;</Link></li>
+            <li className="button" onClick={props.showModal}>Edit</li>
+            <li className="button" onClick={deleteData}>Delete</li>
+          </ul>
+          <img className={'imageHeader'} src={data.image_url} alt={data.title} />
+        </div>
+        <div className="content">
+          <img className={'imageBook'} src={data.image_url} alt={data.title} />
+          <p className="title">{data.title}</p>
+          <p className="date">{convert(data.updated_at)}</p>
+          <p className="text">{data.description}</p>
+        </div>
       </div>
-      <div className="content">
-        <img className={'imageBook'} src={data.image_url} alt={data.title} />
-        <p className="title">{data.title}</p>
-        <p className="date">{convert(data.updated_at)}</p>
-        <p className="text">{data.description}</p>
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default BookDetail

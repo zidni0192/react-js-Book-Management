@@ -15,21 +15,21 @@ const Modal = (props) => {
     function getData(evt) {
         setText({ nme: evt.target.value })
     }
-    function add() {        
-        setData(data.description=document.getElementById('description').value,data.title=document.getElementById('title').value,data.image_url=document.getElementById('image_url').value)
+    function add() {
+        setData(data.description = document.getElementById('description').value, data.title = document.getElementById('title').value, data.image_url = document.getElementById('image_url').value)
         autoID()
         document.getElementById('description').value = ""
         document.getElementById('title').value = ""
-        document.getElementById('image_url').value =""
-        setData(data.created_at=new Date(),data.updated_at=new Date())
+        document.getElementById('image_url').value = ""
+        setData(data.created_at = new Date(), data.updated_at = new Date())
         props.dataAdded(data)
         props.handleClose()
         setData({})
     }
     function edit() {
-        setData(data.image_url=document.getElementById('image_url').value,data.description=document.getElementById('description').value,data.title=document.getElementById('title').value)
+        setData(data.image_url = document.getElementById('image_url').value, data.description = document.getElementById('description').value, data.title = document.getElementById('title').value)
         let bookid = props.match.params.bookid
-        setData(data.bookid = bookid,data.created_at=dataFind.created_at,data.updated_at= new Date()    )
+        setData(data.bookid = bookid, data.created_at = dataFind.created_at, data.updated_at = new Date())
         props.dataEdited(dataIndex, data)
         props.handleClose()
         setData({})
@@ -66,11 +66,11 @@ const Modal = (props) => {
                             <p>Description</p>
                         </div>
                         <div className="input">
-                            <textarea placeholder="Description" id={'description'} rows="5" name="description" onChange={getData} value={texts.description}  required></textarea>
+                            <textarea placeholder="Description" id={'description'} rows="5" name="description" onChange={getData} value={texts.description} required></textarea>
                         </div>
                     </div>
                     <div>
-                    <button className="save" onClick={action}>Save</button>
+                        <button className="save" onClick={action}>Save</button>
                     </div>
                 </div>
             </section>
