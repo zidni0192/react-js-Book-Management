@@ -48,7 +48,6 @@ class App extends Component {
       <div id="app">
         <Router>
         <Redirect from="/" to="/book"/>
-          <Switch>
             <Route exact path={"/book"}>
               <Route exact path={"/book"} component={Nav} />
               <Route exact path={"/book"} render={() => <Search setSearch={this.setSearch} />} />
@@ -60,16 +59,11 @@ class App extends Component {
               <Route path={"/book/:bookid"} render={(props) => <ModalDelete data={this.state} deleteData={this.deleteData} modalDelete={this.state.modalDelete} hideModalDelete={this.hideModalDelete} {...props} />} />
               <Route path={"/book/:bookid"} render={(props) => <Modal dataState={this.state} show={this.state.show} handleClose={this.hideModal} dataEdited={this.editData} {...props} />} />
             </Route>
-            <Route component={redirect}/>
-          </Switch>
         </Router>
       </div>
     )
   }
 }
-function redirect() {
-  alert("adishbkiajdbsdaljsn")
-  return <Redirect path={"/book"} />
-}
+
 
 export default App
