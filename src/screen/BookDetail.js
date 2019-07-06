@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 function convert(date) {
@@ -22,14 +22,13 @@ function BookDetail(props) {
     props.showModalDelete()
   }
   if (!data) {
-    console.log("sadnsljnlsandlisnl")
-    return (document.location.href = "/book")
+    return (document.location.href = "/")
   } else {
     return (
       <div className="book-detail">
         <div>
           <ul>
-            <li><Link to="/book" className="back">&lArr;</Link></li>
+            <li><Link to="/" className="back">&lArr;</Link></li>
             <li className="button" onClick={props.showModal}>Edit</li>
             <li className="button" onClick={deleteData}>Delete</li>
           </ul>

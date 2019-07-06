@@ -26,7 +26,7 @@ function list({ prop, search, showModal }) {
                     data.map(
                         item => {
                             return (
-                                <Link to={`/book/${item.bookid}`}>
+                                <Link to={`/${item.bookid}`}>
                                     <div className="item" id="items" bookid={item.bookid}>
                                         <img src={item.image_url} alt="gambar" />
                                         <div>
