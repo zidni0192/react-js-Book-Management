@@ -48,6 +48,7 @@ class App extends Component {
       <div id="app">
         <Router>
           <Switch>
+            <Redirect from="/" to="/book"/>
             <Route exact path={"/book"}>
               <Route exact path={"/book"} component={Nav} />
               <Route exact path={"/book"} render={() => <Search setSearch={this.setSearch} />} />
