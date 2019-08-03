@@ -33,8 +33,8 @@
 
 ## Screenshoot
 <div>
-    <img src="/src/screenshoot/Screenshoot1.png">
-    <img src="/src/screenshoot/Screenshoot.png">
+    <img src="src/screenshoot/Screenshot.png">
+    <img src="src/screenshoot/Screenshot1.png">
 </div>
 
 ## Demo
