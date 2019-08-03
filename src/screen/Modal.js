@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 const Modal = (props) => {
     const [texts, setText] = useState(props.dataAdded ? "" : props.dataState.Data.find(item => item.bookid === props.match.params.bookid))
     const [data, setData] = useState({})
-    console.log(props)
     const showHideClassName = props.show ? "modal display-block" : "modal display-none"
     let action = props.dataAdded ? add : edit
     let dataFind = []
@@ -35,9 +34,7 @@ const Modal = (props) => {
         setData({})
     }
     function autoID() {
-        console.log(props.dataState.Data[props.dataState.Data.length - 1].bookid)
         setData(data.bookid = (Number(props.dataState.Data[props.dataState.Data.length - 1].bookid) + 1).toString())
-        console.log(data.id)
     }
     return (
         <div className={showHideClassName}>

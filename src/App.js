@@ -30,14 +30,12 @@ class App extends Component {
   }
   addData = (data) => {
     this.state.Data.push(data)
-    console.log(this.state.Data)
   }
   deleteData = (index) => {
     this.state.Data.splice(index, 1)
-    console.log(this.state.Data)
   }
   editData = (index, editData) => {
-    this.setState(Data[index] = editData)
+    this.setState(this.state.Data[index] = editData)
   }
   setSearch = (search) => {
     this.setState({ search: search })

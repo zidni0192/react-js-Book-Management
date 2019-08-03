@@ -173,18 +173,22 @@ p.date {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   z-index: 3000;
+  overflow-y: scroll
 }
 
 .modal-main {
-  position: fixed;
   background: white;
   width: 80%;
-  height: 500px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  min-height: 500px;
+  margin-left: 50%;
+  transform: translateX(-50%);
   border-radius: 10px;
-  box-shadow: 0px 0px 5px gray
+  box-shadow: 0px 0px 5px gray;
+  padding: 20px 0px;
+  overflow: hidden;
+  box-sizing: border-box;;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .close {
@@ -220,6 +224,7 @@ p.date {
 
 .label {
   width: 20%;
+  min-width: 200px;
   font-size: 15pt;
   float: left;
 }
@@ -240,6 +245,7 @@ p.date {
 }
 
 .input {
+  padding: 10px 20px;
   font-size: 20px;
   font-weight: bold;
   width: 65%;
@@ -259,7 +265,7 @@ p.date {
   resize: none;
 }
 
-.save ,.delete {
+.save, .delete {
   padding: 12px 30px;
   background-color: #f4cf5d;
   border: 0;
@@ -274,7 +280,6 @@ p.date {
   z-index: 1100;
 }
 
-.confirmation{
+.confirmation {
   text-align: center;
-
 }

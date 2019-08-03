@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function ModalDelete(props) {
-    console.log(props)
     const showHideClassName = props.modalDelete ? "modal display-block" : "modal display-none"
     let bookid = props.match.params.bookid
     let Data = props.data.Data

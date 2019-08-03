@@ -13,7 +13,6 @@ function text(text) {
 function list({ prop, search, showModal }) {
     let dataMap
     if (search !== '') {
-
         dataMap = prop.Data.filter(item => item.title.toLowerCase().indexOf(search.toLowerCase()) > -1)
     }
     let data = search !== '' ? dataMap : prop.Data
@@ -22,7 +21,7 @@ function list({ prop, search, showModal }) {
             <button className="add" onClick={showModal}>ADD</button>
             <div className="list-item">
                 {
-
+                    
                     data.map(
                         item => {
                             return (
@@ -30,7 +29,6 @@ function list({ prop, search, showModal }) {
                                     <div className="item" id="items" bookid={item.bookid}>
                                         <img src={item.image_url} alt="gambar" />
                                         <div>
-                                            {console.log(item)}
                                             <p>{text(item.title)}</p>
                                         </div>
                                     </div>

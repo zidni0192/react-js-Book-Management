@@ -13,11 +13,9 @@ function convert(date) {
 }
 let data
 function BookDetail(props) {
-  console.log(props)
   let bookid = props.match.params.bookid
   let Data = props.data.Data
   data = Data.find((item) => item.bookid === bookid)
-  console.log(data)
   function deleteData() {
     props.showModalDelete()
   }
